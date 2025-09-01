@@ -14,7 +14,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 async function syncLotofacil() {
   try {
     console.log("Conectando ao banco de dados...");
-    await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect(process.env.MONGO_URL);
     console.log("Conexão com o banco de dados estabelecida ✅");
 
     // 1 - Encontrar o último concurso salvo no banco
