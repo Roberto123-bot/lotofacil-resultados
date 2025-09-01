@@ -5,10 +5,10 @@ import dotenv from "dotenv";
 import cors from "cors";
 import cron from "node-cron";
 import axios from "axios";
-import loteriasRoutes from "./routes/loteriasRoutes.js";
+import loteriasRoutes from "./loteriasRoutes.js";
 
 // Importa o modelo simplificado que você criou
-import Lotofacil from "./models/Lotofacil.js";
+import Lotofacil from "./Lotofacil.js";
 
 // Carrega as variáveis de ambiente
 dotenv.config();

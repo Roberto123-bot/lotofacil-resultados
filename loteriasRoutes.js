@@ -1,5 +1,5 @@
 import express from "express";
-import Lotofacil from "../models/Lotofacil.js"; // Certifique-se de que o caminho está correto
+import Lotofacil from "./Lotofacil.js"; // Certifique-se de que o caminho está correto
 
 const router = express.Router();
 

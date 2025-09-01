@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import axios from "axios";
 import dotenv from "dotenv";
 
-import Lotofacil from "./models/Lotofacil.js"; // Certifique-se de que o caminho está correto
+import Lotofacil from "./Lotofacil.js"; // Certifique-se de que o caminho está correto
 
 dotenv.config();
 
