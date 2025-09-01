@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000";
+const API_URL = "lotofacil-resultados-production.up.railway.app";
 let currentConcurso = null;
 
 // Elementos da página do visualizador
