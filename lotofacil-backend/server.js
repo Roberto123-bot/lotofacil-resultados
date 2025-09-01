@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(loteriasRoutes);
 
 // 🔹 Conexão MongoDB
-mongoose.connect(process.env.MONGO_URI);
+mongoose.connect(process.env.MONGO_URL);
 
 // 🔹 Função de sincronização simplificada
 async function syncLotofacil() {
