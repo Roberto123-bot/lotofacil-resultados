@@ -1,0 +1,372 @@
+/* Inclui a biblioteca Tailwind CSS */
+@import url("https://cdn.tailwindcss.com");
+
+body {
+  background-color: #f0f2f5;
+  color: #333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+}
+.container {
+  max-width: 900px;
+  margin-bottom: 10px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.lotofacil-logo {
+  width: 150px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1 {
+  text-align: center;
+  color: #6a1b9a;
+  margin-bottom: 20px;
+}
+.concurso-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.concurso-info h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #4a4a4a;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto 20px;
+}
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.5s ease, transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.drawn {
+  background-color: #4caf50; /* Verde */
+  color: white;
+  transform: scale(1.05);
+}
+.not-drawn {
+  background-color: #e0e0e0; /* Cinza */
+  color: #555;
+}
+.navigation-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.form-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.hidden {
+  display: none;
+}
+.loading-text {
+  text-align: center;
+  color: #888;
+}
+
+/* Estilos do Menu Dropdown */
+.navbar-custom {
+  background-color: #6a1b9a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+.navbar-brand img {
+  height: 40px;
+}
+.navbar-nav .nav-item .nav-link {
+  color: #fff;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+}
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.dropdown-menu {
+  background-color: #7b29ac;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+.dropdown-item {
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* Estilos da nova página */
+#pares-container,
+#movimento-container {
+  margin-top: 20px;
+}
+.table-custom {
+  background-color: #f8f9fa;
+}
+.table-custom th {
+  background-color: #6a1b9a;
+  color: #fff;
+}
+.table-custom tbody tr:nth-child(odd) {
+  background-color: #e9ecef;
+}
+.table-custom td,
+.table-custom th {
+  border: none;
+}
+.movimento-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #f1e4ff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+}
+.movimento-item .numero {
+  font-size: 1.5rem;
+  color: #6a1b9a;
+  font-weight: bold;
+}
+.movimento-item .frequencia {
+  font-size: 1.2rem;
+  color: #4caf50;
+}
+#tabela-movimento table thead th {
+  background-color: #4caf50; /* verde padrão */
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  padding: 8px;
+}
+
+.painel {
+  display: grid;
+  grid-template-columns: repeat(5, 40px);
+  gap: 5px;
+  margin-top: 15px;
+}
+
+.num {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #666;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.num.selecionado {
+  background: #7209b7;
+  color: #fff;
+}
+.resultados {
+  margin-top: 20px;
+  flex: 1;
+  background-color: #f9f9f9;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px gray;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #131313;
+  border-radius: 15px;
+}
+
+.botoes {
+  margin-top: 20px;
+}
+button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button#conferir {
+  background: #2e7d32;
+  color: #fff;
+}
+button#limpar {
+  background: #c62828;
+  color: #fff;
+}
+
+/* Estilo base */
+.resultado-item {
+  padding: 5px;
+  margin: 2px 0;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Estilo base para todas as linhas de resultado */
+.linha-resultado {
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Cores para cada pontuação premiada */
+.acertos-11 {
+  background-color: #bbdefb; /* Azul bem claro */
+  color: #1d2d50;
+  border-left: 5px solid #2196f3;
+}
+
+.acertos-12 {
+  background-color: #a5d6a7; /* Verde claro */
+  color: #1b5e20;
+  border-left: 5px solid #4caf50;
+}
+
+.acertos-13 {
+  background-color: #ffcc80; /* Laranja claro */
+  color: #4e342e;
+  border-left: 5px solid #ff9800;
+}
+
+.acertos-14 {
+  background-color: #ffb74d; /* Laranja mais forte (prêmio alto) */
+  color: #4e342e;
+  font-weight: bold;
+  border-left: 5px solid #f57c00;
+}
+.acertos-15 {
+  background-color: #ff4d4d; /* Laranja mais forte (prêmio alto) */
+  color: #4e342e;
+  font-weight: bold;
+  border-left: 5px solid #f50000;
+}
+
+/* Seu código CSS atual... */
+
+/* --- Media Query para telas de celular --- */
+@media (max-width: 768px) {
+  /* Centraliza o logo, se necessário */
+  .lotofacil-logo {
+    width: 120px; /* Reduz a largura do logo */
+    margin: 10px auto; /* Centraliza */
+  }
+
+  /* Ajusta o container principal */
+  .lotofacil-resultados {
+    padding: 15px; /* Reduz o padding geral */
+  }
+
+  /* Reduz o tamanho da fonte para títulos */
+  .concurso-info h1 {
+    font-size: 1.2em;
+  }
+
+  .concurso-info h2 {
+    font-size: 1em;
+  }
+
+  /* Ajusta o grid dos números */
+  .grid-container {
+    max-width: 320px; /* Reduz a largura máxima do grid */
+    grid-template-columns: repeat(
+      5,
+      1fr
+    ); /* Mantém 5 colunas, ou você pode mudar para 4 ou 3 se preferir */
+    gap: 10px; /* Reduz o espaçamento entre os botões */
+    margin: 0 auto; /* Centraliza */
+  }
+
+  /* Ajusta o tamanho dos botões */
+  .grid-item {
+    width: 45px; /* Reduz a largura dos botões */
+    height: 45px; /* Reduz a altura dos botões */
+    font-size: 0.9em; /* Reduz o tamanho da fonte do número */
+  }
+
+  /* Painel Montar e Testar */
+  .painel {
+    max-width: 320px; /* Reduz a largura máxima do grid */
+    grid-template-columns: repeat(
+      5,
+      1fr
+    ); /* Mantém 5 colunas, ou você pode mudar para 4 ou 3 se preferir */
+    gap: 10px; /* Reduz o espaçamento entre os botões */
+    margin: 0 auto; /* Centraliza */
+  }
+
+  /* Ajusta o painel de números */
+  .painel {
+    max-width: 320px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 0 auto;
+  }
+
+  /* Ajusta o tamanho dos botões de seleção */
+  .num {
+    width: 45px; /* Reduz a largura do botão */
+    height: 45px; /* Reduz a altura do botão */
+    font-size: 0.9em; /* Reduz o tamanho da fonte */
+  }
+
+  /* Ajusta os botões de ação */
+  button {
+    padding: 8px 16px; /* Reduz o padding dos botões de conferir e limpar */
+    font-size: 0.9em;
+  }
+}
