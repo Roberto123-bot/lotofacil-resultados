@@ -1,5 +1,6 @@
 // server.js
 import path from "path";
+import { fileURLToPath } from "url";
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
@@ -7,8 +8,6 @@ import cors from "cors";
 import cron from "node-cron";
 import axios from "axios";
 import loteriasRoutes from "./loteriasRoutes.js";
-
-// Importa o modelo simplificado que você criou
 import Lotofacil from "./Lotofacil.js";
 
 // Carrega as variáveis de ambiente
@@ -18,6 +17,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(loteriasRoutes);
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Adiciona o middleware para servir arquivos estáticos do front-end
 app.use(express.static(path.join(__dirname, "lotofacil-frontend")));
