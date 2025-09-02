@@ -1,6 +1,5 @@
-const path = require("path");
-
 // server.js
+import path from "path";
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
