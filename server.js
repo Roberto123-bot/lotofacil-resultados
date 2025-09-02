@@ -1,3 +1,5 @@
+const path = require("path");
+
 // server.js
 import express from "express";
 import mongoose from "mongoose";
@@ -17,6 +19,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(loteriasRoutes);
+
+// Adiciona o middleware para servir arquivos estáticos do front-end
+app.use(express.static(path.join(__dirname, "lotofacil-frontend")));
 
 // 🔹 Conexão MongoDB
 mongoose.connect(process.env.MONGO_URL);
