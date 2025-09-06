@@ -11,14 +11,14 @@ body {
   position: relative;
 }
 .container {
-  max-width: 900px;
-  margin-bottom: 10px;
-  margin: 20px auto;
+  max-width: 400px; /* diminui a largura máxima */
+  margin: 40px auto; /* centraliza e dá espaço em cima/baixo */
   padding: 20px;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
 .lotofacil-logo {
   width: 150px;
   margin-bottom: 20px;
@@ -61,7 +61,7 @@ h1 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .drawn {
-  background-color: #4caf50; /* Verde */
+  background-color: #6a1b9a; /* Verde */
   color: white;
   transform: scale(1.05);
 }
