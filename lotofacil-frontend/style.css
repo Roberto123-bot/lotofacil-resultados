@@ -11,7 +11,7 @@ body {
   position: relative;
 }
 .container {
-  max-width: 400px; /* diminui a largura máxima */
+  max-width: 500px; /* diminui a largura máxima */
   margin: 40px auto; /* centraliza e dá espaço em cima/baixo */
   padding: 20px;
   background-color: #fff;
@@ -40,14 +40,32 @@ h1 {
   font-size: 1.5rem;
   color: #4a4a4a;
 }
+
+#quantidade-concursos {
+  margin-bottom: 15px; /* espaço abaixo do input */
+}
+
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(5, 1fr); /* sempre 5 colunas */
+  gap: 6px; /* menos espaço entre os números */
   justify-content: center;
-  max-width: 400px;
-  margin: 0 auto 20px;
+  max-width: 260px; /* controla a largura total do painel */
+  margin: 0 auto 20px; /* centraliza */
+  margin-top: 15px; /* espaço acima do painel */
 }
+
+.grid-container div {
+  width: 42px; /* largura menor */
+  height: 42px; /* altura menor */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* formato bolinha */
+  font-size: 14px; /* número proporcional */
+  font-weight: bold;
+}
+
 .grid-item {
   display: flex;
   align-items: center;
@@ -176,7 +194,7 @@ h1 {
 
 .painel {
   display: grid;
-  grid-template-columns: repeat(5, 40px);
+  grid-template-columns: repeat(5, 20px);
   gap: 5px;
   margin-top: 15px;
 }
@@ -327,8 +345,18 @@ button#limpar {
       5,
       1fr
     ); /* Mantém 5 colunas, ou você pode mudar para 4 ou 3 se preferir */
-    gap: 10px; /* Reduz o espaçamento entre os botões */
+    gap: 5px; /* Reduz o espaçamento entre os botões */
     margin: 0 auto; /* Centraliza */
+    padding: 30px;
+  }
+
+  .container {
+    max-width: 400px; /* diminui a largura máxima */
+    margin: 40px auto; /* centraliza e dá espaço em cima/baixo */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   /* Ajusta o tamanho dos botões */
